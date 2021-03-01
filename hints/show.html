@@ -1,0 +1,87 @@
+<html>
+
+    <head>
+
+        <title>MOBy-Rahmenprogramm</title>
+        <style>
+            html, body {
+                background: black;
+            }
+            body {
+                padding: 12px;
+                margin: 0;
+            }
+            #draw {
+                position: absolute;
+                top: 0;
+                left: 0;
+                mix-blend-mode: lighten;
+            }
+            #img-container {
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                color: white;
+            }
+            #drawcredits {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 10px;
+                font-family: sans-serif;
+                user-select: none;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <canvas id="draw" style="display: none;"></canvas>
+        <div id="img-container">Einen Moment...</div>
+        <p id="drawcredits" style="display: none;">Zeichen-Tools von federico-moretti/canvas-free-drawing (GitHub)</p>
+
+        <script src="./js/canvas-free-drawing.min.js"></script>
+
+        <script>
+            const COLORS = {
+                "Blau": "rgb(63, 72, 204)", 
+                "Rot": "rgb(151, 0, 49)", 
+                "Gruen": "rgb(26, 132, 58)", 
+                "Pink": "rgb(255, 102, 152)", 
+                "Grau": "rgb(127, 127, 127)", 
+                "Gold": "rgb(189, 142, 2)"
+            };
+            const urlParams = new URLSearchParams(window.location.search);
+            const imgPath = urlParams.get("img") || "";
+            let validImgPath = false;
+            let bgColor = "black";
+            for (let color of Object.keys(COLORS)) {
+                if (imgPath.startsWith(color + "/")) {
+                    bgColor = color;
+                    break;
+                }
+            }
+            let img = document.getElementById("img-container");
+            img.style.backgroundImage = `url(./${ imgPath })`;
+            img.innerText = "";
+            document.body.style.background = COLORS[bgColor] || bgColor;
+
+            if (urlParams.get("draw")) {
+                const cfd = new CanvasFreeDrawing.default({
+                    elementId: "draw",
+                    width: document.body.clientWidth,
+                    height: document.body.clientHeight, 
+                    backgroundColor: [0, 0, 0], 
+                    strokeColor: [255, 255, 255]
+                });
+                document.getElementById("draw").style.display = "block";
+                document.getElementById("drawcredits").style.display = "block";
+            }
+        </script>
+
+    </body>
+
+</html>
