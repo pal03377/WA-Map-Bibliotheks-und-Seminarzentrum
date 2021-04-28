@@ -45,7 +45,7 @@
         
                         <div class="pswp__counter"></div>
         
-                        <button class="pswp__button pswp__button--fs" title="Vollbild umschalten"></button>
+                        <button id="fullscreenButton" class="pswp__button pswp__button--fs" title="Vollbild umschalten"></button>
         
                         <button class="pswp__button pswp__button--zoom" title="Herein- / Herauszoomen"></button>
         
@@ -133,6 +133,10 @@
                 filter: drop-shadow(0 0 2px black);
                 font-family: sans-serif;
                 opacity: .7;
+            }
+
+            #fullscreenButton {
+                transform: translate(-36px, -5px);
             }
         </style>
 
