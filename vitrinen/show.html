@@ -1,0 +1,141 @@
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Vitrinen im Pabel-Hörsaal</title>
+        <style>
+            html, body {
+                background: black;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+
+        <!-- following https://photoswipe.com/documentation/getting-started.html -->
+
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        
+            <!-- Background of PhotoSwipe. 
+                 It's a separate element as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+        
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+        
+                <!-- Container that holds slides. 
+                    PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                    Don't modify these 3 pswp__item elements, data is added later on. -->
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+        
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+        
+                    <div class="pswp__top-bar">
+        
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+        
+                        <div class="pswp__counter"></div>
+        
+                        <button class="pswp__button pswp__button--fs" title="Vollbild umschalten"></button>
+        
+                        <button class="pswp__button pswp__button--zoom" title="Herein- / Herauszoomen"></button>
+        
+                        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+        
+                    <button class="pswp__button pswp__button--arrow--left" title="Vorheriges (Linkspfeil)">
+                    </button>
+        
+                    <button class="pswp__button pswp__button--arrow--right" title="Nächstes (Rechtspfeil)">
+                    </button>
+        
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+
+        <span class="note">
+            Bilder der Ausstellung 'Zeichnen Messen Rechnen', 
+            <span id="vitrineNr"></span>
+            © Theresa Lechner
+        </span>
+
+
+        <link rel="stylesheet" href="./photoswipe/photoswipe.css">
+        <link rel="stylesheet" href="./photoswipe/default-skin/default-skin.css">
+        <script src="./photoswipe/photoswipe.min.js"></script>
+        <script src="./photoswipe/photoswipe-ui-default.min.js"></script>
+
+        <script>
+
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var urlParams = new URLSearchParams(window.location.search);
+            var n = urlParams.get("n") || "1";
+            document.getElementById("vitrineNr").innerText = "Schaukasten " + n + ", ";
+            var allImages = { '1_beschreibung-tl.jpg': { 'w': 864, 'h': 1296 }, '1_gesamt_1-tl.jpg': { 'w': 608, 'h': 912 }, '1_HI-0075-tl.jpg': { 'w': 1296, 'h': 864 }, '1_HI-0076-tl.jpg': { 'w': 1296, 'h': 864 }, '1_HI-0079-tl.jpg': { 'w': 1294, 'h': 516 }, '1_HI-0081-tl.jpg': { 'w': 1296, 'h': 864 }, '1_HI-0088-tl.jpg': { 'w': 1294, 'h': 620 }, '1_HI-0104-tl.jpg': { 'w': 864, 'h': 1296 }, '1_HI-0164-tl.jpg': { 'w': 1294, 'h': 575 }, '2_beschreibung-tl.jpg': { 'w': 864, 'h': 1296 }, '2_gesamt_1-tl.jpg': { 'w': 608, 'h': 912 }, '2_HI-0158-tl.jpg': { 'w': 1296, 'h': 864 }, '2_HI-0159-tl.jpg': { 'w': 1296, 'h': 864 }, '2_HI-0179-tl.jpg': { 'w': 973, 'h': 864 }, '2_HI-0180-tl.jpg': { 'w': 970, 'h': 781 }, '2_HI-0181-tl.jpg': { 'w': 1144, 'h': 864 }, '2_HI-0186-tl.jpg': { 'w': 1101, 'h': 716 }, '2_HI-0236-tl.jpg': { 'w': 1296, 'h': 864 }, '3-HI-0220-tl.jpg': { 'w': 846, 'h': 845 }, '3_beschreibung-tl.jpg': { 'w': 577, 'h': 829 }, '3_gesamt_1-tl.jpg': { 'w': 608, 'h': 912 }, '3_HI-0218-tl.jpg': { 'w': 880, 'h': 818 }, '3_HI-ellen_oben_tl.jpg': { 'w': 911, 'h': 224 }, '3_HI-ellen_unten-tl.jpg': { 'w': 870, 'h': 415 }, '4_beschreibung-tl.jpg': { 'w': 864, 'h': 1296 }, '4_gesamt_1-tl.jpg': { 'w': 608, 'h': 912 }, '4_HI-0006-tl.jpg': { 'w': 1038, 'h': 863 }, '4_HI-0007-tl.jpg': { 'w': 934, 'h': 841 }, '4_HI-0008-tl.jpg': { 'w': 1296, 'h': 864 }, '4_HI-0009-tl.jpg': { 'w': 1296, 'h': 864 }, '4_HI-0010-tl.jpg': { 'w': 1296, 'h': 864 }, '4_HI-0011-tl.jpg': { 'w': 1296, 'h': 864 }, '4_HI-0013-tl.jpg': { 'w': 1296, 'h': 864 }, '4_HI-0014-tl.jpg': { 'w': 975, 'h': 834 }, '4_HI-0016-tl.jpg': { 'w': 1296, 'h': 864 }, '4_HI-0017-tl.jpg': { 'w': 1296, 'h': 864 }, '4_HI-0018-tl.jpg': { 'w': 1296, 'h': 864 }, '4_HI-0162-tl.jpg': { 'w': 1296, 'h': 864 }, '4_HI-0173-tl.jpg': { 'w': 1294, 'h': 556 }, '5_beschreibung-tl.jpg': { 'w': 864, 'h': 1296 }, '5_gesamt_1-tl.jpg': { 'w': 608, 'h': 912 }, '5_HI-0049-tl.jpg': { 'w': 1150, 'h': 683 }, '5_HI-0050-tl.jpg': { 'w': 1224, 'h': 668 }, '5_HI-0056-tl.jpg': { 'w': 1201, 'h': 716 }, '5_HI-0122-tl.jpg': { 'w': 1296, 'h': 864 }, '5_HI-0123-tl.jpg': { 'w': 1237, 'h': 568 }, '5_HI-0124-tl.jpg': { 'w': 1286, 'h': 623 }, '5_HI-0126-tl.jpg': { 'w': 1296, 'h': 650 }, '5_HI-0127-tl.jpg': { 'w': 717, 'h': 320 }, '5_HI-0129-tl.jpg': { 'w': 1015, 'h': 422 }, '5_HI-0133-tl.jpg': { 'w': 1296, 'h': 864 }, '6_beschreibung.jpg': { 'w': 864, 'h': 1296 }, '6_gesamt_1-tl.jpg': { 'w': 608, 'h': 912 }, '6_HI-0027-tl.jpg': { 'w': 1198, 'h': 580 }, '6_HI-0028-tl.jpg': { 'w': 1250, 'h': 590 }, '6_HI-0030-tl.jpg': { 'w': 1294, 'h': 650 }, '6_HI-0031-tl.jpg': { 'w': 1296, 'h': 864 }, '6_HI-0032-tl.jpg': { 'w': 1276, 'h': 598 }, '6_HI-0033-tl.jpg': { 'w': 1296, 'h': 694 }, '6_HI-0035-tl.jpg': { 'w': 1042, 'h': 775 }, '6_HI-0036-tl.jpg': { 'w': 1296, 'h': 534 }, '6_HI-0037-tl.jpg': { 'w': 1296, 'h': 539 }, '6_HI-0060-tl.jpg': { 'w': 1296, 'h': 748 }, '6_HI-0065-tl.jpg': { 'w': 1294, 'h': 571 }, '6_HI-0066-tl.jpg': { 'w': 1282, 'h': 514 }, '6_HI-0068-tl.jpg': { 'w': 1296, 'h': 864 }, '6_HI-0070-tl.jpg': { 'w': 952, 'h': 704 }, '6_HI-0071-tl.jpg': { 'w': 1282, 'h': 574 }, '6_HI-0114-tl.jpg': { 'w': 1296, 'h': 711 }, '6_HI-0175-tl.jpg': { 'w': 1294, 'h': 754 } };
+            var items = Object.keys(allImages)
+                .filter(name => name.startsWith(n.toString()))
+                .map(name => {
+                    return {
+                        src: "./img/" + name, 
+                        msrc: "./img/thumbnail/" + name, 
+                        w: allImages[name].w, 
+                        h: allImages[name].h
+                    };
+                });
+            console.log(items)
+
+            // define options (if needed)
+            var options = {};
+
+            // Initializes and opens PhotoSwipe
+            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+
+        </script>
+
+        <style>
+            .note {
+                position: fixed;
+                bottom: 4px;
+                right: 8px;
+                font-size: 12px;
+                color: white;
+                z-index: 1501;
+                filter: drop-shadow(0 0 2px black);
+                font-family: sans-serif;
+                opacity: .7;
+            }
+        </style>
+
+    </body>
+
+</html>
