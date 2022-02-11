@@ -1,0 +1,135 @@
+<html>
+
+    <head>
+
+        <title>MOBy-Rahmenprogramm</title>
+        <style>
+            html, body {
+                background: black;
+            }
+            body {
+                padding: 12px;
+                margin: 0;
+            }
+            #draw {
+                position: absolute;
+                top: 0;
+                left: 0;
+                mix-blend-mode: lighten;
+            }
+            #container {
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                color: white;
+            }
+            #drawcredits {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 10px;
+                font-family: sans-serif;
+                user-select: none;
+            }
+            #audio-controls {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #play-pause {
+                font-size: 64px;
+                background: transparent;
+                border-radius: 8px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <canvas id="draw" style="display: none;"></canvas>
+        <div id="container">Einen Moment...</div>
+        <div id="audio-controls" style="display:none;">
+            <button id="play-pause" onclick="playpause()">⏯️</button>
+        </div>
+        <p id="drawcredits" style="display: none;">Zeichen-Tools von federico-moretti/canvas-free-drawing (GitHub)</p>
+
+        <script src="./js/canvas-free-drawing.min.js"></script>
+
+        <script>
+            const COLORS = {
+                "blau": "#3f48cc", 
+                "gelb": "#ffc90e", 
+                "gruen": "#b5e61d", 
+                "indigo": "#4b0082", 
+                "orange": "#ed7117"
+            };
+            const urlParams = new URLSearchParams(window.location.search);
+
+            if (urlParams.get("img")) {
+                const imgPath = urlParams.get("img") || "";
+                let validImgPath = false;
+                let bgColor = "black";
+                for (let color of Object.keys(COLORS)) {
+                    if (imgPath.startsWith(color + "/")) {
+                        bgColor = color;
+                        break;
+                    }
+                }
+                let img = document.getElementById("container");
+                img.style.backgroundImage = `url(./${ imgPath })`;
+                img.innerText = "";
+                document.body.style.background = COLORS[bgColor] || bgColor;
+                if (urlParams.get("draw")) {
+                    const cfd = new CanvasFreeDrawing.default({
+                        elementId: "draw",
+                        width: document.body.clientWidth,
+                        height: document.body.clientHeight,
+                        backgroundColor: [0, 0, 0],
+                        strokeColor: [255, 255, 255]
+                    });
+                    document.getElementById("draw").style.display = "block";
+                    document.getElementById("drawcredits").style.display = "block";
+                }
+            } else if (urlParams.get("audio")) {
+                const audioPath = urlParams.get("audio") || "";
+                let validAudioPath = false;
+                let bgColor = "black";
+                for (let color of Object.keys(COLORS)) {
+                    if (audioPath.startsWith(color + "/")) {
+                        bgColor = color;
+                        break;
+                    }
+                }
+                let container = document.getElementById("container");
+                container.innerHTML = `<audio id="player" src="${ audioPath }" type="audio/mpeg">`;
+                document.getElementById("audio-controls").style.display = "flex";
+                document.body.style.background = COLORS[bgColor] || bgColor;
+            } else {
+                alert("img oder audio Parameter fehlt als Pfad");
+            }
+
+
+            let playing = false;
+            function playpause() {
+                if (playing) {
+                    document.getElementById("player").pause();
+                    document.getElementById("play-pause").innerText = "⏯️";
+                } else {
+                    document.getElementById("player").play();
+                    document.getElementById("play-pause").innerText = "⏸️";
+                }
+                playing = !playing;
+            }
+        </script>
+
+    </body>
+
+</html>

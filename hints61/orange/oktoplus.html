@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<title>Lieblingsspielzeug</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+
+		<style>
+
+			body {
+				margin: 10px;
+				background-color: #ED7117;
+				font-family: Arial, sans-serif;
+			}
+
+			.button {
+				display: block;
+				background: transparent;
+				margin-top: 10px;
+				border-radius: 10px;
+				border-color: #000000;
+				border-style: solid;
+				border-width: 1px;
+				width: 150px;
+				padding: 5px;
+				text-align: center;
+				font-weight: bold;
+				cursor: pointer;
+			}
+
+			#game {
+				background-color: #FCAE1C;
+				border-radius: 10px;
+				border-style: solid;
+				border-width: 3px;
+				border-color: #cccccc;
+				padding: 10px;
+			}
+
+			#resultArea {
+				margin-top: 5px;
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+
+			#statusArea {
+				font-size: 120%;
+			}
+
+			#footerArea {
+				text-align: center;
+				margin-top:5px;
+				font-size: 90%;
+				font-style: italic;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="game">
+			<h1>Hallo! Ich bin der Oktoplus und verrate dir die Zahl der orangenen Farbe, wenn du mir mein Lieblingsspielzeug nennen kannst!</h1>
+			<div id="statusArea">
+				<p>Mein Lieblingsspielzeug:</p>
+			</div>
+			<input type="text" id="userGuess" />
+			<button id="buttonArea" class="button">Bestätigen</button>
+    	<br>
+    	<div id="resultArea" class="text"></div>
+		<div id="footerArea">
+			61. Landesrunde der Mathematik-Olympiade Bayern
+		</div>
+	</div>
+
+	<script src="./md5.min.js"></script>
+	<script>
+
+		var secretHash = "95a57a2044b54a2297de7f2a1a7589ba",
+			salt = "abcdasdfghjklqwertzuiopyxcxvbnm", 
+			numberOfGuesses = 0;
+
+		function writeMessage(elementId, message, appendMessage) {
+			var elemToUpdate = document.getElementById(elementId);
+			if (appendMessage) {
+				elemToUpdate.innerHTML = elemToUpdate.innerHTML + message;
+			} else {
+				elemToUpdate.innerHTML = message;
+			}
+		};
+
+		function newGame() {
+			numberOfGuesses = 0;
+		}
+
+		function guessInRange(guess) {
+			return true;
+		}
+
+		function userGuessed() {
+			var userGuessed = document.getElementById('userGuess').value;
+			var statusArea = document.getElementById('statusArea');
+			var resultArea = document.getElementById('resultArea');
+			if (userGuessed.length == 0) {
+				writeMessage('resultArea', '<p>Bitte das Lieblingsspielzeug in das Textfeld tippen und auf "Bestätigen" klicken!</p>');
+			} else if (md5(userGuessed.toLowerCase() + salt) !== secretHash) {
+				writeMessage('resultArea', '<p>Leider Falsch! Versuche es erneut!</p>');
+			} else {
+				numberOfGuesses++;
+				if (md5(userGuessed.toLowerCase() + salt) === secretHash) {
+					// Got it
+					writeMessage('resultArea', '<p>Du hast mein Lieblingsspielzeug erraten! Es ist der ' + userGuessed + '! <br><br> Die Zahl der orangenen Farbe ist die Anzahl der Ecken meines Lieblingsspielzeugs!</p>');
+				}
+			}
+
+			document.getElementById('userGuess').value = '';
+		}
+
+		window.onload = function () {
+			newGame();
+			document.getElementById('buttonArea').addEventListener('click', userGuessed);
+			document.getElementById('userGuess').addEventListener("keyup", function (event) {
+				if (event.keyCode === 13) { // Enter
+					event.preventDefault();
+					userGuessed();
+				}
+			});
+		};
+
+	</script>
+
+	</body>
+</html>
