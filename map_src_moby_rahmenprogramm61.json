@@ -43,7 +43,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/orange\/oktoplus.html"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/orange\/oktoplus.html"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -334,7 +334,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=gruen\/gruen.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=gruen\/gruen.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -412,7 +412,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/DGL.mp3"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/DGL.mp3"
                 }, 
                 {
                  "name":"openWebsiteTrigger",
@@ -435,7 +435,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Zahlentheorie.mp3"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Zahlentheorie.mp3"
                 }, 
                 {
                  "name":"openWebsiteTrigger",
@@ -458,7 +458,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Topologie.mp3"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Topologie.mp3"
                 }, 
                 {
                  "name":"openWebsiteTrigger",
@@ -481,7 +481,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Funk.Ana.mp3"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Funk.Ana.mp3"
                 }, 
                 {
                  "name":"openWebsiteTrigger",
@@ -504,7 +504,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Numerik.mp3"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Numerik.mp3"
                 }, 
                 {
                  "name":"openWebsiteTrigger",
@@ -527,7 +527,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Stochastik.mp3"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Stochastik.mp3"
                 }, 
                 {
                  "name":"openWebsiteTrigger",
@@ -550,7 +550,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Analysis.mp3"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Analysis.mp3"
                 }, 
                 {
                  "name":"openWebsiteTrigger",
@@ -573,7 +573,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Algebra.mp3"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?audio=gelb\/Algebra.mp3"
                 }, 
                 {
                  "name":"openWebsiteTrigger",
@@ -800,7 +800,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA0.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA0.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -818,7 +818,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA1.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA1.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -836,7 +836,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA2.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA2.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -854,7 +854,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA3.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA3.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -872,7 +872,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA4.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA4.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -890,7 +890,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA5.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA5.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -908,7 +908,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA6.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA6.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -926,7 +926,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA7.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA7.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -944,7 +944,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA8.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA8.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -962,7 +962,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA9.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=blau\/5.BlauWA9.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -980,7 +980,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=indigo\/6.IndigoWA4.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=indigo\/6.IndigoWA4.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -998,7 +998,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=indigo\/6.IndigoWA3.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=indigo\/6.IndigoWA3.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1016,7 +1016,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=indigo\/6.IndigoWA2.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=indigo\/6.IndigoWA2.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1034,7 +1034,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=indigo\/6.IndigoWA1.png"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=indigo\/6.IndigoWA1.png"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1052,7 +1052,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pal03377.github.io\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=orange\/raeder.gif"
+                 "value":"https:\/\/ifm.mathematik.uni-wuerzburg.de\/workadventure\/WA-Map-Bibliotheks-und-Seminarzentrum\/hints61\/show.html?img=orange\/raeder.gif"
                 }, 
                 {
                  "name":"openWebsiteTrigger",
